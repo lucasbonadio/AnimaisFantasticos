@@ -1,4 +1,4 @@
-function scrollInit() {
+function initScroll() {
     const linksInternos = document.querySelectorAll('.menu a[href^="#"]');
 
     function scrollSmooth(event) {
@@ -22,9 +22,9 @@ function scrollInit() {
         item.addEventListener('click', scrollSmooth);
     });
 };
-scrollInit();
+initScroll();
 
-function tabInit() {
+function initTab() {
     const animaisLista = document.querySelectorAll('.animais-lista li');
     const animaisDescricao = document.querySelectorAll('.animais-descricao section');
 
@@ -43,9 +43,9 @@ function tabInit() {
         });
     })
 }
-tabInit();
+initTab();
 
-function animaScrollInit() {
+function initAnimaScroll() {
     const sections = document.querySelectorAll('.js-scroll')
     if (sections.length) {
         const window60 = window.innerHeight * 0.7;
@@ -66,4 +66,4 @@ function animaScrollInit() {
         window.addEventListener('scroll', animaScroll)
     }
 }
-animaScrollInit();
+initAnimaScroll();
