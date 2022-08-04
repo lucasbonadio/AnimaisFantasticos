@@ -26,9 +26,7 @@ scrollInit();
 
 function tabInit() {
     const animaisLista = document.querySelectorAll('.animais-lista li');
-    console.log(animaisLista);
     const animaisDescricao = document.querySelectorAll('.animais-descricao section');
-    console.log(animaisDescricao);
 
     animaisDescricao[0].classList.toggle('ativo');
 
@@ -45,5 +43,27 @@ function tabInit() {
         });
     })
 }
-
 tabInit();
+
+function animaScrollInit() {
+    const sections = document.querySelectorAll('.js-scroll')
+    if (sections.length) {
+        const window60 = window.innerHeight * 0.7;
+
+        function animaScroll() {
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top - window60;
+                if (sectionTop < 0) {
+                    section.classList.add('ativo')
+                } else {
+                    section.classList.remove('ativo')
+                }
+            })
+        }
+
+        animaScroll();
+
+        window.addEventListener('scroll', animaScroll)
+    }
+}
+animaScrollInit();
