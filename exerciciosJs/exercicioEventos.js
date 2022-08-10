@@ -1,3 +1,5 @@
+/* EXERCICIOS RELACIONADOS A EVENTOS*/
+
 /* EXERCICIOS 1*/
 // const imagens = document.querySelectorAll('img') 
 // console.log(imagens)
